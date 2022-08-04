@@ -1,0 +1,18 @@
+/* 폰트 import 해줄 것 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+#root > div {
+  margin: auto;
+  max-width: 450px;
+  height: inherit;
+
+}
