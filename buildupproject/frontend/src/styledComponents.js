@@ -104,6 +104,30 @@ export const HeaderTextBox = styled.ul`
     }
 `
 
+export const Asd = styled.div`
+    // flex: 1;
+`
+
+
 export const Footer = styled.div`
-    bottom:0;
+    list-style-type: none;
+    height: 61px !important;
+    display : flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid black;
+
+
+    .userimgcover {
+        width: 30%;
+        height: 70%; 
+        border-radius: 70%;
+        overflow: hidden;
+    }
+
+    .userimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 `

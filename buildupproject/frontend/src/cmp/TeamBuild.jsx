@@ -6,9 +6,10 @@ import {
   HeaderRightIcon,
   HeaderTextBox,
   Footer,
+  Asd,
 } from "../styledComponents";
 
-import { faEllipsis, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faUserGroup, faBookmark, faEllipsis, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -35,7 +36,15 @@ const TeamBuild = () => {
           <li className="score600">창업</li>
         </HeaderTextBox>
       </Header>
-      <Footer></Footer>
+      <Asd>
+
+      </Asd>
+      <Footer>
+          <button><img src="/img/bottomicon.png" style={{ height: "40px" }} /></button>
+          <button><FontAwesomeIcon icon={faBookmark} /></button>
+          <button><FontAwesomeIcon icon={faUserGroup} /></button>
+          <button className="userimgcover"><img src="/img/user.png" className="userimg"/></button>
+      </Footer>
     </>
   );
 };
