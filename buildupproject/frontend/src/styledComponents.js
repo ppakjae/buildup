@@ -76,7 +76,7 @@ export const HeaderTop = styled.div`
         max-width: 100%;
         width:13%;
         height: auto;
-        margin 0 auto;
+        margin: 0 auto;
     }
 `
 
@@ -172,9 +172,8 @@ export const MainBottom = styled.div`
     }
 `
 
-
-export const Footer = styled.div`
-    position: fixed;
+export const FooterDiv = styled.div`
+    position: absolute;
     height: 60px !important;
     width: inherit;
     border-top: 1px solid #D0CECE;
@@ -182,7 +181,7 @@ export const Footer = styled.div`
     margin-bottom: 0 !important;
     bottom:0;
     left: 0;
-    right 0;
+    right: 0;
     background-color: white;
 
     .userimgcover {
