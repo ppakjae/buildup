@@ -18,11 +18,17 @@ import {
 
 import { faEllipsis, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 
 // import ReactDOM from 'react-dom'
 
 const TeamBuild = () => {
+  const navigate = useNavigate();
+  const goFindMember = () => {
+    navigate("/find_member");
+  };
+
   return (
     <>
       <ForBottomBar>
@@ -63,7 +69,11 @@ const TeamBuild = () => {
             </MiddleBtn>
             <MiddleBtn className="score600" style={{ marginLeft: "3px", padding: "15px 0 15px 0" }}>
               팀원 모집글 작성
-              <MainButton className="score500" style={{ marginTop: "16px", padding: "2% 9%" }}>
+              <MainButton
+                onClick={goFindMember}
+                className="score500"
+                style={{ marginTop: "16px", padding: "2% 9%" }}
+              >
                 바로가기
               </MainButton>
             </MiddleBtn>

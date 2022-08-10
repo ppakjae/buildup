@@ -112,7 +112,6 @@ export const HeaderTextBox = styled.ul`
     }
 `
 
-
 export const MainDiv = styled.div`
     flex: 1;
     width: inherit;
@@ -139,7 +138,6 @@ export const TopRightText = styled.button`
     color: #828282;
     background-color: transparent;
 `
-
 
 export const MainMiddle = styled.div`
     display: flex;
