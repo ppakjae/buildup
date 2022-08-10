@@ -81,7 +81,7 @@ export const HeaderTop = styled.div`
 `
 
 export const HeaderRightDiv = styled.div`
-    position absolute;
+    position: absolute;
     margin-top: 6px;
     right: 7%;
     display: flex;
