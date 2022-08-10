@@ -8,15 +8,12 @@
 #root {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 #root > div {
   margin: auto;
   max-width: 450px;
-  height: inherit;
-
+  /* height: inherit; */
 }
 
 /* 폰트 적용 클래스 - 뒤에 숫자가 폰트 굵기 */

@@ -25,7 +25,7 @@ const Home = () => {
             빌덥과 함께 대학 생활의 질을 높여볼까요?
           </p>
         </div>
-        <MainButton onClick={goTeamBuild} type="button" fontSize="17px" className="score500" style={{ marginTop: "100px" }}>
+        <MainButton onClick={goTeamBuild} type="button" fontSize="17px" className="score500" style={{ marginTop: "100px", padding: "10px 31px"}}>
           시작하기!
         </MainButton>
       </div>

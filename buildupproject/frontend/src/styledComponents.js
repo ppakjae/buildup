@@ -5,8 +5,9 @@ import styled from 'styled-components';
 // Home 페이지
 export const HomeDiv = styled.div`
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        height: inherit;
 
     .home_wrapper {
         display: flex;
@@ -41,7 +42,7 @@ export const HomeDiv = styled.div`
 export const MainButton = styled.button`
     // 폰트 사이즈는 정의 하실때 속성값으로 정하는 걸로 했어요!
     font-size: ${(props) => props.fontSize};
-    padding: 10px 31px;
+    // padding: 10px 31px;
     border: 2px solid #ee793f;
     border-radius: 40px;
     background-color: white;
@@ -53,9 +54,16 @@ export const MainButton = styled.button`
     } */
 `
 
+export const ForBottomBar = styled.div`
+    padding-bottom: 60px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+`
+
 // 상단바
 export const Header = styled.div`
-    margin-top: 20px!important;
+    padding-top: 20px!important;
     width: 100%;
     height: auto !important;
 `
@@ -73,7 +81,7 @@ export const HeaderTop = styled.div`
 `
 
 export const HeaderRightDiv = styled.div`
-    position : absolute;
+    position absolute;
     margin-top: 6px;
     right: 7%;
     display: flex;
@@ -104,30 +112,102 @@ export const HeaderTextBox = styled.ul`
     }
 `
 
-export const Asd = styled.div`
-    // flex: 1;
+
+export const MainDiv = styled.div`
+    flex: 1;
+    width: inherit;
+    
+`
+
+export const MainTop = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    padding: 0 23px 10px 23px;
+    border-bottom: 1px solid #D0CECE;
+`
+
+export const TopRightDiv = styled.div`
+    margin-top: 6px;
+    width: 100%;
+`
+
+export const TopRightText = styled.button`
+    float: right;
+    border: none;
+    color: #828282;
+    background-color: transparent;
+`
+
+
+export const MainMiddle = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 23px 20px 23px;
+    border-bottom: 1px solid #D0CECE;
+`
+export const MiddleBtn = styled.button`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    border: 2px solid #BDBEBF;
+    border-radius: 12px;
+    height: 13vh;
+    min-height:88px;
+    width: 41vw;
+    background-color: transparent;
+`
+
+export const MainBottom = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 23px 24px 23px;
+    height: auto;
+
+    .bottomposter {
+        margin-top: 20px;
+    }
 `
 
 
 export const Footer = styled.div`
-    list-style-type: none;
-    height: 61px !important;
-    display : flex;
-    justify-content: space-between;
-    width: 100%;
-    border-top: 1px solid black;
-
+    position: fixed;
+    height: 60px !important;
+    width: inherit;
+    border-top: 1px solid #D0CECE;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    bottom:0;
+    left: 0;
+    right 0;
+    background-color: white;
 
     .userimgcover {
-        width: 30%;
-        height: 70%; 
+        width: 40px;
+        height: 40px; 
         border-radius: 70%;
         overflow: hidden;
     }
+`
+
+export const FooterIn = styled.div`
+    height: inherit;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 23px 0 23px;
+`
+
+export const FooterBtn = styled.button`
+    border: none;
+    background-color: transparent;
 
     .userimg {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
+}
 `
