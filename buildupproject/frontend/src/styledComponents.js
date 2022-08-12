@@ -76,12 +76,12 @@ export const HeaderTop = styled.div`
         max-width: 100%;
         width:13%;
         height: auto;
-        margin 0 auto;
+        margin: 0 auto;
     }
 `
 
 export const HeaderRightDiv = styled.div`
-    position absolute;
+    position: absolute;
     margin-top: 6px;
     right: 7%;
     display: flex;
@@ -112,7 +112,6 @@ export const HeaderTextBox = styled.ul`
     }
 `
 
-
 export const MainDiv = styled.div`
     flex: 1;
     width: inherit;
@@ -139,7 +138,6 @@ export const TopRightText = styled.button`
     color: #828282;
     background-color: transparent;
 `
-
 
 export const MainMiddle = styled.div`
     display: flex;
@@ -172,9 +170,8 @@ export const MainBottom = styled.div`
     }
 `
 
-
-export const Footer = styled.div`
-    position: fixed;
+export const FooterDiv = styled.div`
+    position: absolute;
     height: 60px !important;
     width: inherit;
     border-top: 1px solid #D0CECE;
@@ -182,7 +179,7 @@ export const Footer = styled.div`
     margin-bottom: 0 !important;
     bottom:0;
     left: 0;
-    right 0;
+    right: 0;
     background-color: white;
 
     .userimgcover {
