@@ -43,7 +43,7 @@ export const MainButton = styled.button`
     // 폰트 사이즈는 정의 하실때 속성값으로 정하는 걸로 했어요!
     font-size: ${(props) => props.fontSize};
     // padding: 10px 31px;
-    border: 2px solid #ee793f;
+    border: 3px solid #ee793f;
     border-radius: 40px;
     background-color: white;
     /* box-shadow: 0 3px 0 #a5532f;
@@ -207,4 +207,43 @@ export const FooterBtn = styled.button`
         height: 100%;
         object-fit: cover;
 }
+`
+
+
+// FindMember부터 해당
+
+export const BackHeader = styled.div`
+    width: inherit;
+    height: 41px !important;
+`
+
+export const FindMain = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const OrangeTextBox = styled.p`
+    color: #EE783E;
+    font-size: 13px;
+    border: 2px solid #EE783E;
+    padding: 1px 10px;
+    border-radius: 5px;
+`
+
+export const MemberBoxCover = styled.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+`
+
+export const MemberBox = styled.button`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #C9CACA;
+    border-radius: 10px;
+    padding: 10px 12px 7px 12px;
+    margin: 0px 10px;
+    background-color: transparent;
 `
