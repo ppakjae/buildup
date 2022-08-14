@@ -246,4 +246,21 @@ export const MemberBox = styled.button`
     padding: 10px 12px 7px 12px;
     margin: 0px 10px;
     background-color: transparent;
+    &:hover {
+        background-color: #ff9866;
+        border: 2px solid #ff9866;
+    };
+
+    .cover {
+        background-color: #ff9866;
+    }
+`
+
+export const ConditionBtn = styled.button`
+    display: flex;
+    align-items: center;
+    padding : 3px 10px;
+    border: 2px solid #C9CACA;
+    border-radius: 20px;
+    background-color: transparent;
 `
