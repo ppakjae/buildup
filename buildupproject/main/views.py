@@ -23,7 +23,7 @@ class MemberList(APIView):
     def post(self, request):
         serializer = MemberSerializer(data = request.data)
         if serializer.is_valid():
-            serializer.save
+            serializer.save()
             return Response(serializer.data, status = status.HTTP_201_CREATED)
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
 
@@ -50,4 +50,4 @@ class MemberDetail(APIView):
     def delete(self, request, pk, format = None):
         member = self.get_object(pk)
         member.delete()
-        return Response(Status = status.HTTP_204_NO_CONTENT)
+        return Response(status = status.HTTP_204_NO_CONTENT)

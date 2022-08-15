@@ -16,7 +16,8 @@ class Member(models.Model):
     field = models.CharField(max_length=70)
     tech_stack = models.CharField(max_length=70)
     career_period = models.IntegerField(default=0)
-    pr_text = models.CharField(max_length=500)
+    self_introduction = models.CharField(max_length=500)
+    project_method = models.CharField(max_length=70, default="대면")
 
     def __str__(self):
         return self.name
