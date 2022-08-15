@@ -4,6 +4,8 @@ import Home from './cmp/Home';
 import TeamBuild from './cmp/TeamBuild';
 import FindMember from './cmp/FindMember';
 import SelectCondition from './cmp/SelectCondition';
+import RestAPI from "./RestAPI.js"
+
 
 const App = () => {
     return (
@@ -13,7 +15,7 @@ const App = () => {
             <Route path='/team_build' element={<TeamBuild />} />
             <Route path="/find_member" element={<FindMember /> } />
             <Route path="/select_condition" element={<SelectCondition /> } />
-
+            <Route path="/rest_api" element={<RestAPI /> } />
         </Routes>
     );
 };
