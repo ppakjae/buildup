@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import {
     BackHeader,
@@ -16,39 +16,7 @@ const Find_member = () => {
   const goSelectCondition = () => {
     navigate("/select_condition");
   };
-
-  var product_planner = false;
-  var developer = false;
-  var designer = false;
-  var maketer = false;
-
-  function product_plannerClick () {
-    product_planner = true;
-    developer = false;
-    designer = false;
-    maketer = false;
-  };
-
-  function developerClick () {
-    product_planner = false;
-    developer = true;
-    designer = false;
-    maketer = false;
-  };
-
-  function designerClick () {
-    product_planner = false;
-    developer = false;
-    designer = true;
-    maketer = false;
-  };
-
-  function maketerClick () {
-    product_planner = false;
-    developer = false;
-    designer = false;
-    maketer = true;  
-  };
+  const [backgroundColor, setOrange] = useState("transparent");
 
   return (
     <>
@@ -64,21 +32,30 @@ const Find_member = () => {
             당신이 찾는 팀원의 분야를 선택해주세요!
         </OrangeTextBox>
         <MemberBoxCover>
-            <MemberBox onClick={product_plannerClick} type="button" className={(product_planner ? "cover" : "")}>
+            <MemberBox onClick={() => {
+                setOrange('#ff9866');
+            }} type="button" style={{backgroundColor}}>
                 <img src="/img/members/product_planner.png" alt="product_planner.png" style={{ height:"62px", marginBottom:"20px" }}/>
                 <p className="score600">기획자</p>
+
             </MemberBox>
-            <MemberBox onClick={developerClick} type="button" className={(developer ? "cover" : "")}>
+            <MemberBox onClick={() => {
+                setOrange('#ff9866');
+            }} type="button" style={{backgroundColor}}>
                 <img src="/img/members/developer.png" alt="developer.png" style={{ height:"62px", marginBottom:"20px" }}/>
                 <p className="score600">개발자</p>
             </MemberBox>
         </MemberBoxCover>
         <MemberBoxCover>
-            <MemberBox onClick={designerClick} type="button" className={(designer ? "cover" : "")}>
+            <MemberBox onClick={() => {
+                setOrange('#ff9866');
+            }} type="button" style={{backgroundColor}}>
                 <img src="/img/members/designer.png" alt="designer.png" style={{ height:"62px", marginBottom:"20px" }}/>
                 <p className="score600">디자이너</p>
             </MemberBox>
-            <MemberBox onClick={maketerClick} type="button" className={(maketer ? "cover" : "")}>
+            <MemberBox onClick={() => {
+                setOrange('#ff9866');
+            }} type="button" style={{backgroundColor}}>
                 <img src="/img/members/maketer.png" alt="maketer.png" style={{ height:"62px", marginBottom:"20px" }}/>
                 <p className="score600">마케터</p>
             </MemberBox>
