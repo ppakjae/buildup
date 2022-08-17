@@ -262,14 +262,66 @@ export const ConditionBtn = styled.button`
 export const SimilarMemberDiv = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     >p {
         margin-top: 35px;
     }
 
     .memberBox {
+        width: 100vw;
+        height: 62vh;
+        max-width: 350px;
+        margin-top: 35px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        -ms-overflow-style: none;
+        overflow: scroll;
+        
+        ::-webkit-scrollbar{
+            display:none;
+        }
+
+        .member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+            border: 2px solid rgb(159, 163, 171);
+            border-radius: 15px;
+            padding: 15px;
+
+            img {
+                max-width: 130px;
+            }
+
+            .nameBox {
+                display: flex;
+                padding: 18px 0 21px 0;
+                align-items: flex-end;
+                font-size: 17px;
+
+                >p {
+                    padding-left: 3px;
+                    font-size: 15px;
+                }
+            }
+
+            .more {
+                color: rgb(159, 163, 171);
+                background-color: transparent;
+                border: none;
+            }
+
+            :nth-child(odd) {
+                margin: 10px 10px 10px 0px;
+            }
+
+            :nth-child(even) {
+                margin: 10px 0px 10px 10px;
+            }
+        }
         
     }
 
