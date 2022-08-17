@@ -224,9 +224,9 @@ export const FindMain = styled.div`
 
 export const OrangeTextBox = styled.p`
     color: #EE783E;
-    font-size: 13px;
+    font-size: 12px;
     border: 2px solid #EE783E;
-    padding: 1px 10px;
+    padding: 1px 25px;
     border-radius: 5px;
 `
 
@@ -243,12 +243,20 @@ export const MemberBox = styled.button`
     border: 2px solid #C9CACA;
     border-radius: 10px;
     padding: 10px 12px 7px 12px;
-    margin: 0px 10px;
+    margin: 50px 30px 10px 30px;
     background-color: transparent;
     &:hover {
         background-color: #ff9866;
         border: 2px solid #ff9866;
     };
+`
+
+export const ConditionBoxCover = styled.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 270px;
+    justify-content: space-around;
 `
 
 export const ConditionBtn = styled.button`
@@ -258,7 +266,9 @@ export const ConditionBtn = styled.button`
     border: 2px solid #C9CACA;
     border-radius: 20px;
     background-color: transparent;
+    margin-top: 25px;
 `
+
 export const SimilarMemberDiv = styled.div`
     display: flex;
     flex-direction: column;
