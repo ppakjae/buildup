@@ -209,7 +209,6 @@ export const FooterBtn = styled.button`
 }
 `
 
-
 // FindMember부터 해당
 
 export const BackHeader = styled.div`
@@ -259,4 +258,19 @@ export const ConditionBtn = styled.button`
     border: 2px solid #C9CACA;
     border-radius: 20px;
     background-color: transparent;
+`
+export const SimilarMemberDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    >p {
+        margin-top: 35px;
+    }
+
+    .memberBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
 `
