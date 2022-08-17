@@ -1,15 +1,31 @@
-import React from "react";
+import { React, useState } from "react";
 import Footer from "./Footer";
+import axios from "axios";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SimilarMemberDiv, BackHeader, OrangeTextBox } from "../styledComponents";
 import { useNavigate } from "react-router-dom";
 
 const SimilarMember = () => {
+  const [text, setText] = useState([]);
   const navigate = useNavigate();
   const goMore = () => {
     navigate("/more");
   };
+
+  const getData = () => {
+    axios
+      .get("http://127.0.0.1:8000/api/member")
+      .then((response) => {
+        setText([...response.data]);
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+  console.log(getData);
 
   return (
     <>
@@ -46,6 +62,26 @@ const SimilarMember = () => {
             </button>
           </div>
         </div>
+        {text.map((e) => (
+          <div>
+            {" "}
+            <div className="list">
+              <span>
+                {e.id}번, {e.name}, {e.field}, {e.tech_stack}, {e.career_period}, {e.self_introduction},{" "}
+                {e.project_method}
+              </span>
+              <button
+                className="btn-delete"
+                onClick={() => {
+                  axios.delete(`http://127.0.0.1:8000/api/member/${e.id}`);
+                  setText(text.filter((text) => text.id !== e.id));
+                }}
+              >
+                DELETE
+              </button>{" "}
+            </div>
+          </div>
+        ))}
       </SimilarMemberDiv>
       <Footer></Footer>
     </>
