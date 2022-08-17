@@ -280,7 +280,7 @@ export const SimilarMemberDiv = styled.div`
 
     .memberBox {
         width: 100vw;
-        height: 62vh;
+        height: 64vh;
         max-width: 350px;
         margin-top: 35px;
         display: grid;
@@ -310,7 +310,10 @@ export const SimilarMemberDiv = styled.div`
                 display: flex;
                 padding: 18px 0 21px 0;
                 align-items: flex-end;
-                font-size: 17px;
+
+                .name {
+                    font-size: 17px;
+                }
 
                 >p {
                     padding-left: 3px;

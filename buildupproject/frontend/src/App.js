@@ -18,8 +18,7 @@ const App = () => {
             <Route path="/find_member" element={<FindMember />} />
             <Route path="/select_condition" element={<SelectCondition />} />
             <Route path="/similar_member" element={<SimilarMember />} />
-            <Route path="/more" element={<More />} />
-            {/* 가능하면 path="/more/:id" 로 하여금 */}
+            <Route path="/more/:id" element={<More />} />
             <Route path="/rest_api" element={<RestAPI />} />
         </Routes>
     );

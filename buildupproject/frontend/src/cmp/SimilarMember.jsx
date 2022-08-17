@@ -1,21 +1,24 @@
 import { React, useState } from "react";
-import Footer from "./Footer";
-import axios from "axios";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SimilarMemberDiv, BackHeader, OrangeTextBox } from "../styledComponents";
 import { useNavigate } from "react-router-dom";
 
+import Footer from "./Footer";
+import axios from "axios";
+
 const SimilarMember = () => {
-  const [text, setText] = useState([]);
   const navigate = useNavigate();
-  const goMore = () => {
-    navigate("/more");
+
+  const goMore = (e) => {
+    console.log(e);
+    navigate(`/more/${e}`);
   };
 
+  const [text, setText] = useState([]);
   const getData = () => {
     axios
-      .get("http://127.0.0.1:8000/api/member")
+      .get("http://43.200.140.244/api/member")
       .then((response) => {
         setText([...response.data]);
         console.log(response.data);
@@ -24,8 +27,9 @@ const SimilarMember = () => {
         console.log(error);
       });
   };
-
-  console.log(getData);
+  if (text.length === 0) {
+    getData();
+  }
 
   return (
     <>
@@ -41,47 +45,25 @@ const SimilarMember = () => {
         </p>
         <OrangeTextBox className="score600">팀원의 스펙을 살펴보세요!</OrangeTextBox>
         <div className="memberBox">
-          <div className="member">
-            <img src="/img/profile/wjddn.png" alt="wotjs" />
-            <p className="score500 nameBox">
-              장정우
-              <p className="score300">님</p>
-            </p>
-            <button onClick={goMore} type="button" className="more score400">
-              더보기
-            </button>
-          </div>
-          <div className="member">
-            <img src="/img/profile/wjddn.png" alt="wotjs" />
-            <p className="score500 nameBox">
-              장정우
-              <p className="score300">님</p>
-            </p>
-            <button onClick={goMore} type="button" className="more score400">
-              더보기
-            </button>
-          </div>
-        </div>
-        {text.map((e) => (
-          <div>
-            {" "}
-            <div className="list">
-              <span>
-                {e.id}번, {e.name}, {e.field}, {e.tech_stack}, {e.career_period}, {e.self_introduction},{" "}
-                {e.project_method}
-              </span>
+          {text.map((e) => (
+            <div key={e.id} className="member">
+              <img src={`/img/profile/${e.name}.png`} alt={`${e.name}`} />
+              <div className="score500 nameBox">
+                <p className="name">{e.name}</p>
+                <p className="score300">님</p>
+              </div>
               <button
-                className="btn-delete"
                 onClick={() => {
-                  axios.delete(`http://127.0.0.1:8000/api/member/${e.id}`);
-                  setText(text.filter((text) => text.id !== e.id));
+                  goMore(e.id);
                 }}
+                type="button"
+                className="more score400"
               >
-                DELETE
-              </button>{" "}
+                더보기
+              </button>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </SimilarMemberDiv>
       <Footer></Footer>
     </>
