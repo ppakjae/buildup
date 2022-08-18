@@ -167,6 +167,11 @@ export const MainBottom = styled.div`
 
     .bottomposter {
         margin-top: 20px;
+        height: 135px;
+
+        &:hover {
+            height: 136px;
+        }
     }
 `
 
@@ -318,6 +323,15 @@ export const DropDownCover = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`
+
+export const CompetitionSearch = styled.input`
+    display: flex;
+    height: 35px;
+    width: 75%;
+    padding: 3px 15px 0px 15px;
+    border: 1px solid #D0CECE;
+    border-radius: 50px;
 `
 
 export const SimilarMemberDiv = styled.div`
