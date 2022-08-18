@@ -13,7 +13,7 @@
 }
 
 #root > div {
-  /* margin: auto; */
+  margin: auto;
   max-width: 450px;
   height: inherit;
   position: relative;

@@ -3,7 +3,16 @@ import { faUserGroup, faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { FooterDiv, FooterIn, FooterBtn } from "../styledComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useNavigate } from "react-router-dom";
+
+
 const Footer = () => {
+
+  const navigate = useNavigate();
+  const goWhoYou = () => {
+    navigate("/who_are_you");
+  };
+
   return (
     <FooterDiv>
       <FooterIn>
@@ -16,7 +25,7 @@ const Footer = () => {
         <FooterBtn>
           <FontAwesomeIcon icon={faUserGroup} style={{ fontSize: "26px", color: "#9fa3ab" }} />
         </FooterBtn>
-        <FooterBtn className="userimgcover">
+        <FooterBtn onClick={goWhoYou} className="userimgcover">
           <img src="/img/user.png" className="userimg" alt="user.png" />
         </FooterBtn>
       </FooterIn>

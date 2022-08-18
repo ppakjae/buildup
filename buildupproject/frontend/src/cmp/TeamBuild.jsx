@@ -28,6 +28,7 @@ const TeamBuild = () => {
   const goFindMember = () => {
     navigate("/find_member");
   };
+  
 
   return (
     <>

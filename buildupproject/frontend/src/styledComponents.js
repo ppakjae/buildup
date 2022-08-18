@@ -216,6 +216,7 @@ export const BackHeader = styled.div`
     height: 41px !important;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto !important;
 `
 
 export const FindMain = styled.div`
