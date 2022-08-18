@@ -42,11 +42,11 @@ const WhoYou = () => {
 
     return (
         <>
-            <BackHeader style={{ height: "auto"}}>
+            <BackHeader>
                 <FontAwesomeIcon icon={faArrowLeft} style={{ padding: "25px 0 0 23px", color: "" }} />
                 <p className="score600"style={{ padding: "20px 23px 0 0", fontSize: "14px" }}>완료</p>
             </BackHeader>
-            <FindMain className="userimgcover" style={{ height: "auto" }}>
+            <FindMain className="userimgcover">
                 <p className="score600" style={{ fontSize: "100%", marginTop: "20px" }}>당신은 누구인가요?</p>
                 <FooterBtn className="userimgcover">
                     <img src="/img/user.png" className="userimg" alt="user.png" />

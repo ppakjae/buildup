@@ -25,6 +25,9 @@ import Footer from "./Footer";
 
 const TeamBuild = () => {
   const navigate = useNavigate();
+  const goCreatingTeam = () => {
+    navigate("/creating_team");
+  };
   const goFindMember = () => {
     navigate("/find_member");
   };
@@ -64,7 +67,7 @@ const TeamBuild = () => {
           <MainMiddle>
             <MiddleBtn className="score600" style={{ marginRight: "3px", padding: "15px 0 15px 0" }}>
               팀 모집글 작성
-              <MainButton className="score500" style={{ marginTop: "16px", padding: "2% 9%" }}>
+              <MainButton onClick={goCreatingTeam} className="score500" style={{ marginTop: "16px", padding: "2% 9%" }}>
                 바로가기
               </MainButton>
             </MiddleBtn>

@@ -296,6 +296,29 @@ export const UploadFile = styled.button`
     border-radius: 5px;
 `
 
+export const OrangeText = styled.p`
+    color: #EE783E;
+    margin-left: 50px;
+`
+export const Introducing = styled.input`
+    height: 40%;
+    width: 80%;
+    padding: 5px 5px;
+    border: 2px solid #D0CECE;
+    border-radius: 10px;
+        ::placeholder {
+            color: #D0CECE;
+     }
+`
+
+export const DropDown = styled.select`
+`
+
+export const DropDownCover = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
 
 export const SimilarMemberDiv = styled.div`
     display: flex;
