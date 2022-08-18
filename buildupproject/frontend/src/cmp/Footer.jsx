@@ -6,17 +6,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
 
+
+
 const Footer = () => {
 
   const navigate = useNavigate();
   const goWhoYou = () => {
     navigate("/who_are_you");
   };
+  const goTeamBuild = () => {
+    navigate("/team_build");
+  };
 
   return (
     <FooterDiv>
       <FooterIn>
-        <FooterBtn style={{ height: "40px" }}>
+        <FooterBtn onClick={goTeamBuild} style={{ height: "40px" }}>
           <img src="/img/bottomicon.png" style={{ height: "40px" }} alt="icon.png" />
         </FooterBtn>
         <FooterBtn>

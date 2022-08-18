@@ -6,6 +6,8 @@ import {
     BackHeader,
     MemberBoxCover,
     MainBottom,
+    Hashtag,
+    Competitionyear,
 
  } from "../styledComponents";
 
@@ -23,20 +25,21 @@ const Competition = () => {
                 style={{ padding: "25px 0 0 23px", color: "" }}
                 />
             </BackHeader>
+
             <FindMain style={{width: "100%"}}>
-                <CompetitionSearch placeholder="공모전 이름을 검색하십시오."/>
-                <MemberBoxCover>
-                    <p>#개발자</p>
-                    <p>#디자이너</p>
-                    <p>#기획자</p>
-                    <p>#마케터</p>
-                    <p>#웹</p>
-                    <p>#앱</p>
-                    <p>#게임</p>
+                <CompetitionSearch type="text" className="score500" placeholder="공모전 이름을 검색하십시오."></CompetitionSearch>
+                <MemberBoxCover style={{marginTop: "8px"}}>
+                    <Hashtag className="score600">#개발자</Hashtag>
+                    <Hashtag className="score600">#디자이너</Hashtag>
+                    <Hashtag className="score600">#기획자</Hashtag>
+                    <Hashtag className="score600">#마케터</Hashtag>
+                    <Hashtag className="score600">#웹</Hashtag>
+                    <Hashtag className="score600">#앱</Hashtag>
+                    <Hashtag className="score600">#게임</Hashtag>
                 </MemberBoxCover>
-                <BackHeader>
-                    <p>&gt;2022 공모전</p>
-                </BackHeader>
+                <Competitionyear>
+                    <p className="score600" style={{fontSize:"13px"}}>&gt; 2022 공모전</p>
+                </Competitionyear>
 
                 <MainBottom>
                     <img

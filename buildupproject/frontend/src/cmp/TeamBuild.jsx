@@ -14,6 +14,7 @@ import {
   TopRightText,
   MainBottom,
   ForBottomBar,
+  TopPoster,
 } from "../styledComponents";
 
 import { faEllipsis, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -30,6 +31,9 @@ const TeamBuild = () => {
   };
   const goFindMember = () => {
     navigate("/find_member");
+  };
+  const goCompetition = () => {
+    navigate("/competition");
   };
   
 
@@ -57,8 +61,12 @@ const TeamBuild = () => {
         </Header>
 
         <MainDiv>
-          <MainTop className="MainTop">
-            <img src="/img/poster/poster1.png" alt="poster.png" style={{ height: "20vh" }} />
+          <MainTop onClick={goCompetition} className="MainTop">
+            <TopPoster>
+              <img src="/img/poster/poster2.png" alt="poster.png" style={{ height: "15vh", margin:"0 5px" }} />
+              <img src="/img/poster/poster1.png" alt="poster.png" style={{ height: "20vh", margin:"0 5px" }} />
+              <img src="/img/poster/poster3.png" alt="poster.png" style={{ height: "15vh", margin:"0 5px" }} />
+            </TopPoster>
             <TopRightDiv>
               <TopRightText className="score500">더보기</TopRightText>
             </TopRightDiv>
