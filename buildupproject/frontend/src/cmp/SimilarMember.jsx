@@ -11,7 +11,6 @@ const SimilarMember = () => {
   const navigate = useNavigate();
 
   const goMore = (e) => {
-    console.log(e);
     navigate(`/more/${e}`);
   };
 
@@ -55,6 +54,7 @@ const SimilarMember = () => {
               <button
                 onClick={() => {
                   goMore(e.id);
+                  sendData(e);
                 }}
                 type="button"
                 className="more score400"
@@ -71,3 +71,7 @@ const SimilarMember = () => {
 };
 
 export default SimilarMember;
+
+export const sendData = () => {
+  return;
+};

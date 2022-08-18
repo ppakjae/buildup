@@ -339,3 +339,38 @@ export const SimilarMemberDiv = styled.div`
     }
 
 `
+
+export const MoreDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .titleBox {
+        display: flex;
+        padding-top: 70px;
+    }
+
+    p.left{
+        margin-left: 10px;
+    }
+
+    p.fc {
+        color: #EE783E;
+    }
+
+    img {
+        max-width: 150px;
+        padding: 50px 0px 0px 0px;
+    }
+
+    .textBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            padding-top: 30px
+        }
+    }
+
+
+
+`
