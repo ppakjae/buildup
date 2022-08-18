@@ -206,7 +206,7 @@ export const FooterBtn = styled.button`
         width: 100%;
         height: 100%;
         object-fit: cover;
-}
+    };
 `
 
 // FindMember부터 해당
@@ -214,12 +214,21 @@ export const FooterBtn = styled.button`
 export const BackHeader = styled.div`
     width: inherit;
     height: 41px !important;
+    display: flex;
+    justify-content: space-between;
 `
 
 export const FindMain = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .userimgcover {
+        width: 40px;
+        height: 40px; 
+        border-radius: 70%;
+        overflow: hidden;
+    };
 `
 
 export const OrangeTextBox = styled.p`
@@ -268,6 +277,24 @@ export const ConditionBtn = styled.button`
     background-color: transparent;
     margin-top: 25px;
 `
+
+export const TechInput = styled.input`
+    height: 100px;
+    width: 250px;
+    padding: 5px 5px;
+    margin-top: 10px;
+    border: 2px solid #D0CECE;
+    border-radius: 5px;
+`
+
+export const UploadFile = styled.button`
+    align-items: center;
+    width: 40px;
+    background-color: transparent;
+    border: 2px solid #D0CECE;
+    border-radius: 5px;
+`
+
 
 export const SimilarMemberDiv = styled.div`
     display: flex;
