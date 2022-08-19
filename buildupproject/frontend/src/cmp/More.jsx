@@ -4,11 +4,17 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MoreDiv, BackHeader, OrangeTextBox, MainButton } from "../styledComponents";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const More = () => {
   const [text, setText] = useState([]);
   const addr = window.location.href;
   const id = addr[addr.length - 1];
+
+  const navigate = useNavigate();
+  const goWhoYou = () => {
+    navigate("/who_are_you");
+  };
 
   const getData = () => {
     axios
@@ -61,7 +67,12 @@ const More = () => {
             </div>
           </div>
         ))}
-        <MainButton className="score600" type="button" style={{ padding: "5px 20px", marginTop: "50px" }}>
+        <MainButton
+          className="score600"
+          type="button"
+          onClick={goWhoYou}
+          style={{ padding: "5px 20px", marginTop: "50px" }}
+        >
           팀 빌딩 'GO'
         </MainButton>
       </MoreDiv>
@@ -71,13 +82,3 @@ const More = () => {
 };
 
 export default More;
-
-// {
-//   /* <button
-//                 className="btn-delete"
-//                 onClick={() => {
-//                   axios.delete(`http://127.0.0.1:8000/api/member/${e.id}`);
-//                   setText(text.filter((text) => text.id !== e.id));
-//                 }}
-//               ></button> */
-// }
