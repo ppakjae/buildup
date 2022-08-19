@@ -1,13 +1,29 @@
-import React from "react";
+import { React, useState } from "react";
 import Footer from "./Footer";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MoreDiv, BackHeader, OrangeTextBox, MainButton } from "../styledComponents";
-import { sendData } from "./SimilarMember";
+import axios from "axios";
 
 const More = () => {
-  const asd = sendData();
-  console.log(asd);
+  const [text, setText] = useState([]);
+  const addr = window.location.href;
+  const id = addr[addr.length - 1];
+
+  const getData = () => {
+    axios
+      .get(`http://43.200.140.244/api/member/${id}`)
+      .then((response) => {
+        setText([response.data]);
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+  if (text.length === 0) {
+    getData();
+  }
 
   return (
     <>
@@ -18,24 +34,34 @@ const More = () => {
         />
       </BackHeader>
       <MoreDiv>
-        <div className="titleBox">
-          <p className="score600 fc">당신이 찾는 팀원!</p>
-          <p className="left score400">"장정우"</p>
-          <p className="left score600 fc">님</p>
-        </div>
-        <img src="/img/profile/장정우.png" alt="" />
-        <div className="textBox">
-          <p className="score400">기술 스택: react</p>
-          <p className="score400">프로젝트 경험: 1년 개발</p>
-          <p className="score400">진행방식: 온라인/병행</p>
-        </div>
-        <OrangeTextBox
-          className="score600"
-          style={{ fontSize: "14px", marginTop: "50px", padding: "3px 40px" }}
-        >
-          정우님의 프로젝트 상세보기
-        </OrangeTextBox>
-        <MainButton className="score600" type="button" style={{ padding: "5vpx 20px", marginTop: "30px" }}>
+        {text.map((e) => (
+          <div key={e.id} className="box">
+            <div className="titleBox">
+              <p className="score600 fc">당신이 찾는 팀원!</p>
+              <p className="left score400">"{text[0].name}"</p>
+              <p className="left score600 fc">님</p>
+            </div>
+            <img src={`/img/profile/${text[0].name}.png`} alt={`${text[0].name}`} />
+            <div className="textBox">
+              <p className="score400">기술 스택: {text[0].tech_stack}</p>
+              <p className="score400">프로젝트 경험: {text[0].career_period}</p>
+              <p className="score400">진행방식: {text[0].project_method}</p>
+              <OrangeTextBox
+                className="score600"
+                style={{
+                  color: "#1c458f",
+                  border: "2px solid #1c458f",
+                  fontSize: "14px",
+                  marginTop: "50px",
+                  padding: "3px 40px",
+                }}
+              >
+                {text[0].name}님의 프로젝트 상세보기
+              </OrangeTextBox>
+            </div>
+          </div>
+        ))}
+        <MainButton className="score600" type="button" style={{ padding: "5px 20px", marginTop: "50px" }}>
           팀 빌딩 'GO'
         </MainButton>
       </MoreDiv>
