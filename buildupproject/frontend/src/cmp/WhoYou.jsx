@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 import {
-    BackHeader, 
-    FindMain,
-    FooterBtn,
-    OrangeTextBox,
-    ConditionBtn,
-    MemberBoxCover,
-    TechInput,
-    UploadFile,
-
-  } from "../styledComponents";
+  BackHeader,
+  FindMain,
+  FooterBtn,
+  OrangeTextBox,
+  ConditionBtn,
+  MemberBoxCover,
+  TechInput,
+  UploadFile,
+} from "../styledComponents";
 
 import { faArrowLeft, faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
@@ -18,6 +19,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "./Footer";
 
 const WhoYou = () => {
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+      };
 
     const [checkbox1, setCheckbox1] = useState(true);
     const [checkbox2, setCheckbox2] = useState(true);
@@ -44,7 +50,7 @@ const WhoYou = () => {
     return (
         <>  
             <BackHeader>
-                <FontAwesomeIcon icon={faArrowLeft} style={{ padding: "25px 0 0 23px", color: "" }} />
+                <FontAwesomeIcon onClick={goBack} icon={faArrowLeft} style={{ padding: "25px 0 0 23px", color: "" }} />
                 <p className="score600"style={{ padding: "20px 23px 0 0", fontSize: "14px" }}>완료</p>
             </BackHeader>
             <FindMain>
@@ -134,6 +140,6 @@ const WhoYou = () => {
                 
         </>
     );
-}
+};
 
 export default WhoYou;

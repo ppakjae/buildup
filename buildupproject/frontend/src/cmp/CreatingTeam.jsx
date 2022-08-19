@@ -1,4 +1,6 @@
 import React  from "react";
+import { useNavigate } from "react-router-dom";
+
 
 import {
     BackHeader,
@@ -16,10 +18,15 @@ import Footer from "./Footer";
 
 const CreatingTeam = () => {
 
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+      };
+
     return (
         <>
             <BackHeader>
-                <FontAwesomeIcon 
+                <FontAwesomeIcon onClick={goBack}
                     icon={faArrowLeft} style={{ padding: "25px 0 0 23px", color: "" }} />
                 <p className="score600"style={{ padding: "20px 23px 0 0", fontSize: "14px" }}>완료</p>
             </BackHeader>

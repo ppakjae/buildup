@@ -378,7 +378,7 @@ export const SimilarMemberDiv = styled.div`
 
     .memberBox {
         width: 100vw;
-        height: 62vh;
+        height: 64vh;
         max-width: 350px;
         margin-top: 35px;
         display: grid;
@@ -408,7 +408,10 @@ export const SimilarMemberDiv = styled.div`
                 display: flex;
                 padding: 18px 0 21px 0;
                 align-items: flex-end;
-                font-size: 17px;
+
+                .name {
+                    font-size: 17px;
+                }
 
                 >p {
                     padding-left: 3px;
@@ -433,4 +436,42 @@ export const SimilarMemberDiv = styled.div`
         
     }
 
+`
+
+export const MoreDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .titleBox {
+            display: flex;
+            padding-top: 70px;
+        }
+
+        p.left{
+            margin-left: 10px;
+        }
+
+        p.fc {
+            color: #EE783E;
+        }
+
+        img {
+            max-width: 150px;
+            padding: 50px 0px 0px 0px;
+        }
+
+        .textBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                padding-top: 30px
+            }
+        }
+    }
 `
