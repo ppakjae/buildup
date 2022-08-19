@@ -47,7 +47,7 @@ const SimilarMember = () => {
               장정우
               <p className="score300">님</p>
             </p>
-            <button onClick={goMore} type="button" className="more score400">
+            <button onClick={getData} type="button" className="more score400">
               더보기
             </button>
           </div>

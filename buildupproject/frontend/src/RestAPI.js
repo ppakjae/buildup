@@ -7,7 +7,7 @@ function RestAPI() {
   
     return (
       <>
-        <h1>REST API 연습</h1>
+
         <div className="btn-primary">
           <button
             onClick={() => {
