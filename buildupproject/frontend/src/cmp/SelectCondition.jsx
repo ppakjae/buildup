@@ -81,11 +81,14 @@ const Select_condition = () => {
     const goSimilarMember = () => {
         navigate("/similar_member");
     };
+    const goBack = () => {
+      navigate(-1);
+    };
 
   return (
     <>
       <BackHeader>
-        <FontAwesomeIcon icon={faArrowLeft} style={{ padding: "25px 0 0 23px", color: "" }} />
+        <FontAwesomeIcon onClick={goBack} icon={faArrowLeft} style={{ padding: "25px 0 0 23px", color: "" }} />
       </BackHeader>
       <FindMain>
         <p className="score600" style={{ fontSize: "100%", marginTop: "20px" }}>

@@ -12,6 +12,9 @@ const SimilarMember = () => {
   const goMore = () => {
     navigate("/more");
   };
+  const goBack = () => {
+    navigate(-1);
+  };
 
   const getData = () => {
     axios
@@ -30,7 +33,7 @@ const SimilarMember = () => {
   return (
     <>
       <BackHeader>
-        <FontAwesomeIcon
+        <FontAwesomeIcon onClick={goBack}
           icon={faArrowLeft}
           style={{ padding: "25px 0 0 23px", color: "rgb(159, 163, 171)" }}
         />

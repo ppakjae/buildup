@@ -16,6 +16,11 @@ const Find_member = () => {
   const goSelectCondition = () => {
     navigate("/select_condition");
   };
+  const goBack = () => {
+    navigate(-1);
+  };
+
+
   const [back1, setOrange1] = useState("transparent");
   const [back2, setOrange2] = useState("transparent");
   const [back3, setOrange3] = useState("transparent");
@@ -36,9 +41,12 @@ const Find_member = () => {
 
 
   return (
+
+    
+
     <>
       <BackHeader>
-        <FontAwesomeIcon
+        <FontAwesomeIcon onClick={goBack}
           icon={faArrowLeft}
           style={{ padding: "25px 0 0 23px", color: "" }}
         />

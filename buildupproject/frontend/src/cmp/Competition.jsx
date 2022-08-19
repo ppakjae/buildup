@@ -1,4 +1,5 @@
 import React  from "react";
+import { useNavigate } from "react-router-dom";
 
 import { 
     CompetitionSearch,
@@ -17,10 +18,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "./Footer";
 
 const Competition = () => {
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+      };
+
     return (
         <>
             <BackHeader>
-                <FontAwesomeIcon
+                <FontAwesomeIcon onClick={goBack}
                 icon={faArrowLeft}
                 style={{ padding: "25px 0 0 23px", color: "" }}
                 />
