@@ -3,16 +3,15 @@ import { useNavigate } from "react-router-dom";
 
 
 import {
-    BackHeader, 
-    FindMain,
-    FooterBtn,
-    OrangeTextBox,
-    ConditionBtn,
-    MemberBoxCover,
-    TechInput,
-    UploadFile,
-
-  } from "../styledComponents";
+  BackHeader,
+  FindMain,
+  FooterBtn,
+  OrangeTextBox,
+  ConditionBtn,
+  MemberBoxCover,
+  TechInput,
+  UploadFile,
+} from "../styledComponents";
 
 import { faArrowLeft, faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
@@ -141,6 +140,6 @@ const WhoYou = () => {
                 
         </>
     );
-}
+};
 
 export default WhoYou;
