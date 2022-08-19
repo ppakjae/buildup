@@ -127,8 +127,13 @@ export const MainTop = styled.div`
     border-bottom: 1px solid #D0CECE;
 `
 
+export const TopPoster = styled.div`
+    display: flex;
+    align-items: flex-end;
+`
+
 export const TopRightDiv = styled.div`
-    margin-top: 6px;
+    margin-top: 15px;
     width: 100%;
 `
 
@@ -167,6 +172,12 @@ export const MainBottom = styled.div`
 
     .bottomposter {
         margin-top: 20px;
+        height: 135px;
+        border: 1px solid #B7B7B7;
+
+        &:hover {
+            height: 136px;
+        }
     }
 `
 
@@ -187,7 +198,7 @@ export const FooterDiv = styled.div`
         height: 40px; 
         border-radius: 70%;
         overflow: hidden;
-    }
+    };
 `
 
 export const FooterIn = styled.div`
@@ -206,7 +217,7 @@ export const FooterBtn = styled.button`
         width: 100%;
         height: 100%;
         object-fit: cover;
-}
+    };
 `
 
 // FindMember부터 해당
@@ -214,12 +225,23 @@ export const FooterBtn = styled.button`
 export const BackHeader = styled.div`
     width: inherit;
     height: 41px !important;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto !important;
 `
 
 export const FindMain = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .whoimg {
+        margin: 20px 0;
+        width: 105px;
+        height: 105px; 
+        border-radius: 70%;
+        overflow: hidden;
+    };
 `
 
 export const OrangeTextBox = styled.p`
@@ -268,6 +290,82 @@ export const ConditionBtn = styled.button`
     background-color: transparent;
     margin-top: 25px;
 `
+
+export const TechInput = styled.input`
+    height: 12%;
+    width: 98%;
+    padding: 5px 5px;
+    margin-top: 20px;
+    border: 2px solid #D0CECE;
+    border-radius: 12px;
+`
+
+export const UploadFile = styled.button`
+    margin-top: 25px;
+    padding: 5px 5px 0 5px;
+    align-items: center;
+    width: 50px;
+    background-color: transparent;
+    border: 2px solid #D0CECE;
+    border-radius: 9px;
+`
+
+export const OrangeText = styled.p`
+    color: #EE783E;
+`
+export const Introducing = styled.input`
+    height: 50%;
+    min-height: 50px;
+    max-height: 90px;
+    width: 100%;
+    padding: 5px 5px;
+    border: 2px solid #D0CECE;
+    border-radius: 10px;
+        ::placeholder {
+            color: #D0CECE;
+     }
+`
+
+export const DropDown = styled.select`
+    margin-top: 10px;
+    border: 2px solid #D0CECE;
+    border-radius: 8px;
+`
+
+export const DropDownCover = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const CompetitionSearch = styled.input`
+    display: flex;
+    height: 30px;
+    width: 75%;
+    min-width: 250px;
+    margin-top: 15px; 
+    padding: 1px 15px 1px 15px;
+    border: 2px solid #D0CECE;
+    border-radius: 50px;
+
+    ::placeholder {
+        color: #D0CECE;
+     };
+`
+
+export const Hashtag = styled.p`
+     font-size: 12.5px;
+     color: #1C458F;
+     margin: 0 4px;
+`
+
+export const Competitionyear = styled.div`
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+`
+
 
 export const SimilarMemberDiv = styled.div`
     display: flex;
